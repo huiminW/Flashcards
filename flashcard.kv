@@ -1,0 +1,36 @@
+<FlashCards>:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, 0.3
+        Label:
+            id: label1
+            text: 'Welcome'
+            font_size: 80
+
+        Button:
+            id: button1
+            text: 'Show Definition'
+            on_press: root.show_image()
+    ScrollView:
+        Label:
+            id: label2
+            text: ''
+            text_size: self.width, None
+            font_size: 30
+            halign: 'left'
+            valign: 'middle'
+            padding: 50, 50
+            markup: True
+            size_hint_y: None
+            height: self.texture_size[1]
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, 0.3
+        Button:
+            text: 'know'
+            on_press: root.show_card1()
+        Button:
+            text: "don't know"
+            on_press: root.show_card2()
